@@ -1,0 +1,114 @@
+\documentclass{beamer}
+
+% Theme choice
+\usetheme{Madrid}
+
+% Title page details
+\title{Slurm 101}
+\subtitle{How to use the HPC-infrastructure at the CIMH}
+\author{Moritz Werr}
+\institute{Research IT}
+\date{\today}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+% Introduction frame
+\section{Parallel Computing}
+\begin{frame}{Parallel Computing}
+    \begin{itemize}
+        \item Programs have parallel and serial parts
+        \item increase speed of programs by adding more computational power to parallel parts
+        \item Split up larger problems into smaller independently solvable sub-problems to computate them in parallel
+    \end{itemize}
+\end{frame}
+
+% Main content frame
+\section{Our HPC-Cluster}
+\begin{frame}{Our HPC-Cluster}
+	
+	    \begin{itemize}
+		\item 24 virtual nodes and many other hardware nodes (old hardware getting reused)
+		\item Access via your RDS-Machines
+		\item Local storage and Flstorage+Home shared
+		\item Resources are CPU, RAM and GPU
+	\end{itemize}
+%    \begin{block}{Key Point 1}
+%        Describe the first key point here.
+%    \end{block}
+
+%    \begin{block}{Key Point 2}
+%        Describe the second key point here.
+%    \end{block}
+\end{frame}
+
+% Conclusion frame
+\section{Basic Tools}
+\begin{frame}{Basic Tools}
+    \begin{itemize}
+        \item sinfo/squeue Status
+        \item salloc/srun/sbatch Nutzung
+        \item sacct Analyse
+    \end{itemize}
+\end{frame}
+
+\section{Requesting Resources}
+\begin{frame}{Requesting Resources}
+	\begin{itemize}
+		\item Default Values
+		\item Absolute/relative
+		\item CPU/RAM/GPU
+	\end{itemize}
+\end{frame}
+
+\section{Using the cluster}
+\begin{frame}{Interactive Mode}
+	\begin{itemize}
+		\item Interactive mode for testing
+		\item srun to run commands on cluster
+		\item salloc for longer session
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Batch Processing}
+	\begin{itemize}
+		\item Kinit -> copy input -> process -> Kinit -> mv output
+		\item Request ressources in script
+		\item Mail
+	\end{itemize}
+\end{frame}
+
+\section{Kerberos}
+\begin{frame}{Kerberos}
+	\begin{itemize}
+		\item Kerberos on RDS (Login -> no manual kinit needed)
+		\item Create Keytab
+		\item Kinit in script
+	\end{itemize}
+\end{frame}
+
+\section{Examples}
+\begin{frame}{Examples}
+	\begin{itemize}
+		\item Normal
+		\item Array
+	\end{itemize}
+\end{frame}
+	% End of presentation
+\begin{frame}
+    \centering \Large
+    Thank You!
+\end{frame}
+
+\end{document}

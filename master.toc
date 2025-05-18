@@ -1,7 +1,0 @@
-\beamer@sectionintoc {1}{Parallel Computing}{3}{0}{1}
-\beamer@sectionintoc {2}{Our HPC-Cluster}{4}{0}{2}
-\beamer@sectionintoc {3}{Basic Tools}{5}{0}{3}
-\beamer@sectionintoc {4}{Requesting Resources}{6}{0}{4}
-\beamer@sectionintoc {5}{Using the cluster}{7}{0}{5}
-\beamer@sectionintoc {6}{Kerberos}{9}{0}{6}
-\beamer@sectionintoc {7}{Examples}{10}{0}{7}

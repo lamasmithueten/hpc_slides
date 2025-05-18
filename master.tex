@@ -25,11 +25,51 @@
 % Introduction frame
 \section{Parallel Computing}
 \begin{frame}{Parallel Computing}
-    \begin{itemize}
-        \item Programs have parallel and serial parts
-        \item increase speed of programs by adding more computational power to parallel parts
-        \item Split up larger problems into smaller independently solvable sub-problems to computate them in parallel
-    \end{itemize}
+
+Computer Programs contain multiple steps.
+Some steps can only be run \textbf{serially}, some can be run in \textbf{parallel}.
+Serial parts are hard to speed up. Parallel parts can be speed up fairly easy.
+
+\begin{alertblock}{Careful!}
+	Trying to parallelize serial steps can lead to a decrease in performance, crashes and wrong results!
+\end{alertblock}
+
+Knowing which part of a program can be parallelized requires knowledge of the workload and your program.
+ Parallelization can cause \textbf{Race Conditions} and \textbf{Deadlocks}.
+
+\begin{block}{Don't waste resources}
+Simply adding more computational resources won't increase calculation speed.
+\end{block}
+
+
+
+%    \begin{itemize}
+%        \item Programs have parallel and serial parts
+%        \item increase speed of programs by adding more computational power to parallel parts
+%        \item Split up larger problems into smaller independently solvable sub-problems to computate them in parallel
+%    \end{itemize}
+\end{frame}
+
+\begin{frame}{Parallel Computing}
+	There are multiple ways to parallelize your program:	
+	\begin{enumerate}
+		\item Vectorization
+		\item \textbf{Multi-Processing}
+		\item \textbf{Multi-Threading}
+		\item Multi-Streaming with GPUs
+	\end{enumerate}
+	\begin{block}{Right tool for the job}
+			Choosing the right tool for the job is important.  In these slides I will focus mainly on Multi-Processing and Multi-Threading.
+	\end{block}
+
+\end{frame}
+\begin{frame}{Parallel Computing}
+	Parallel Computation requires to split up a \textbf{larger problem} into \textbf{smaller sub-problems}, which can be calculated independently. May this be in a shared memory space or seperate memory spaces.
+	
+	\begin{block}{Vectors, Matrices, Tensors}
+		Vectors, Matrices and Tensors operations can be parallelized very easily as each element can calculated independently from the others.
+	\end{block}
+	Splitting up a large datasets into smaller independent datasets is key for parallel execution. Each dataset can be computed on different Nodes inside the cluster.
 \end{frame}
 
 % Main content frame
